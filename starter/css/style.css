@@ -23,6 +23,61 @@ p {
   margin: 0;
 }
 
+.header {
+  padding: 20px;
+  background-color: darkslategray;
+  padding-left: 0px;
+}
+
+.header h1 {
+  background-color: lightseagreen;
+  padding: 0 25px 0 50px;
+  margin-left: 0px;
+}
+
+.header nav {
+  margin-right: 20px;
+  float: right;
+  font-size: 20px;
+  padding-bottom: 0px;
+}
+
+.header nav ul {
+  list-style-type: none;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  color: lightseagreen;
+  border-bottom: 5px solid lightseagreen;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+.hero-banner {
+  background-image: url(../images/02-hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  position: relative;
+}
+
+.hero-banner div {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  background-color: lightseagreen;
+}
+
+.hero-banner div h2 {
+  padding: 0 10px;
+}
+
 .page-wrapper {
   display: grid;
 }
