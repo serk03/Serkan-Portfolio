@@ -11,14 +11,14 @@
   <body>
     <!-- main logo / nav -->
     <header class="header">
-      <h1>Lernantino</h1>
-      <nav>
-        <ul>
-          <li>About Me</li>
-          <li>Work</li>
-          <li>Contact Me</li>
-          <li>Resume</li>
-        </ul>
+      <nav class="nav-bar">
+        <h1>Lernantino</h1>
+        <div class="nav-links">
+          <p><a href="#about">About Me</a></p>
+          <p><a href="#work">Work</a></p>
+          <p><a href="#contact">Contact Me</a></p>
+          <p>Resume</p>
+        </div>
       </nav>
     </header>
 
@@ -31,17 +31,33 @@
 
     <main class="page-wrapper">
       <!-- about me -->
+      <section class="about-heading">
+        <div>
+          <h2>About Me</h2>
+        </div>
+      </section>
       <section class="page-section" id="about">
         <h2>About Me</h2>
       </section>
 
       <!-- portfolio container -->
+      <section class="work-heading">
+        <div>
+          <h2>Work</h2>
+        </div>
+      </section>
+
       <section class="page-section" id="work">
         <h2>Work</h2>
       </section>
 
       <!-- contact -->
-      <section class="page-section contact" id="contact">
+      <section class="contact-heading">
+        <div>
+          <h2>Contact Me</h2>
+        </div>
+      </section>
+      <section class="page-section-contact" id="contact">
         <h2>Contact Me</h2>
       </section>
     </main>
