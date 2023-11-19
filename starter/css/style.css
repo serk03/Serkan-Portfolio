@@ -83,8 +83,11 @@ p {
     "about-heading about "
     "work-heading work "
     "contact-heading contact";
-
   justify-content: space-between;
+  row-gap: 10px;
+  column-gap: 10px;
+
+  padding: 10px 10px;
 }
 
 .about-heading {
