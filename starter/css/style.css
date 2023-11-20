@@ -150,8 +150,8 @@ body {
     "project-1 project-1"
     "project-2 project-3"
     "project-4 project-5";
-  gap: 10px;
-  padding: 10px;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
 .project-1 {
@@ -177,4 +177,10 @@ body {
 .project-5 {
   grid-area: project-5;
   background-color: white;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
