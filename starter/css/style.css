@@ -78,16 +78,16 @@ p {
 .page-wrapper {
   display: grid;
   grid-template-columns: 25% 75%;
-  grid-template-rows: 300px 700px 200px;
+  grid-template-rows: 300px 800px 100px;
   grid-template-areas:
     "about-heading about "
     "work-heading work "
     "contact-heading contact";
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: stretch;
   row-gap: 10px;
   column-gap: 10px;
-
-  padding: 10px 10px;
+  padding: 15px;
 }
 
 .about-heading {
@@ -118,4 +118,42 @@ p {
 #contact {
   grid-area: contact;
   background-color: darkgreen;
+}
+
+.work-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 350px 200px 200px;
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 15px;
+  grid-template-areas:
+    "project-1 project-1"
+    "project-2 project-3"
+    "project-4 project-5";
+}
+
+.project-1 {
+  grid-area: project-1;
+  background-color: white;
+}
+
+.project-2 {
+  grid-area: project-2;
+  background-color: white;
+}
+
+.project-3 {
+  grid-area: project-3;
+  background-color: white;
+}
+
+.project-4 {
+  grid-area: project-4;
+  background-color: white;
+}
+
+.project-5 {
+  grid-area: project-5;
+  background-color: white;
 }
