@@ -25,6 +25,9 @@ p {
   padding: 0;
 }
 
+/* :root {
+} */
+
 /*Font Styles*/
 
 html {
@@ -60,6 +63,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   padding-right: 2%;
+  margin: auto 0;
 }
 .nav-links p {
   padding: 0 0.8rem;
@@ -75,19 +79,30 @@ body {
 /*----------------------------------------------------------*/
 .hero-banner {
   overflow: hidden;
-
   background-image: url(../images/02-hero-bg.jpg);
-  height: 10rem;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
 
 .hero-banner-title {
-  position: absolute;
-  bottom: 1rem;
-  right: 0rem;
-  color: aliceblue;
   background-color: lightseagreen;
-  padding: 0 1rem;
+  align-self: flex-end;
+  padding: 0 20px;
+}
+
+/*Profile-Picture Section*/
+/*----------------------------------------------------------*/
+.profile-pic {
+  padding: 10px;
+  align-self: flex-start;
+}
+
+.profile-pic img {
+  width: 200px;
 }
 
 /*Main Page Section*/
@@ -100,8 +115,8 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 4fr 9fr 1fr;
   grid-template-areas: "about" "work" "contact";
-  padding: 0.6rem;
-  row-gap: 1.5rem;
+  padding: 0.6rem; /*change to px*/
+  row-gap: 1.5rem; /*change to px*/
 }
 
 #about {
@@ -125,7 +140,7 @@ body {
   grid-template-columns: 20% 80%;
   grid-template-rows: 1fr;
   grid-template-areas: "grid-subheading" "content-areas";
-  column-gap: 0.6rem;
+  /* column-gap: 0.6rem; */
 }
 
 .grid-subheading {
@@ -151,37 +166,37 @@ body {
   padding: 0.6rem;
 }
 
+.project-1 {
+  grid-area: project-1;
+  /* min-height: 0px; */
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+.project-2 {
+  grid-area: project-2;
+  /* min-height: 0px; */
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+.project-3 {
+  grid-area: project-3;
+  /* min-height: 0px; */
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+.project-4 {
+  grid-area: project-4;
+  /* min-height: 0px; */
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+.project-5 {
+  grid-area: project-5;
+  /* min-height: 0px; */
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
 .project-grid-styles {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border: 2px solid lightseagreen;
-}
-
-.project-1 {
-  grid-area: project-1;
-  min-height: 0px;
-  background-image: url(../images/02-portfolio-4.jpg);
-}
-.project-2 {
-  grid-area: project-2;
-  min-height: 0px;
-  background-image: url(../images/02-portfolio-1.jpg);
-}
-.project-3 {
-  grid-area: project-3;
-  min-height: 0px;
-  background-image: url(../images/02-portfolio-2.jpg);
-}
-.project-4 {
-  grid-area: project-4;
-  min-height: 0px;
-  background-image: url(../images/02-portfolio-3.jpg);
-}
-.project-5 {
-  grid-area: project-5;
-  min-height: 0px;
-  background-image: url(../images/02-run-buddy.jpg);
 }
 
 /*Contact section*/
@@ -205,14 +220,12 @@ body {
   margin: 0 0.62rem;
   padding: 0.62rem;
 }
-
-/*Media queries for mobile users display screen size 300px*/
+/**Media queries for mobile users display screen size 300px**/
 /*----------------------------------------------------------*/
 @media only screen and (max-width: 300px) {
   .nav-bar {
     display: flex;
     flex-direction: column;
-
     align-items: center;
   }
 
@@ -240,13 +253,15 @@ body {
   }
 
   .hero-banner-title {
-    position: absolute;
-    /* bottom: 1rem;
+    align-self: center;
+    /* padding: 10px; */
+  }
 
-    right: 5rem; */
-    color: aliceblue;
-    background-color: lightseagreen;
-    /* padding: 0 1rem; */
+  /*Profile-Picture Section*/
+  /*----------------------*/
+  .profile-pic {
+    padding: 20px;
+    align-self: center;
   }
 
   .page-section {
@@ -270,7 +285,7 @@ body {
     padding-top: 10%;
     display: grid;
     max-width: 100%;
-    /* max-height: 80%; */
+
     grid-template-columns: 1fr;
     grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -282,6 +297,7 @@ body {
   }
 
   /*Contact me at 300px*/
+  /*----------------------------------------------------------*/
   #contact-content-area {
     display: flex;
     flex-direction: column;
@@ -290,13 +306,15 @@ body {
   .contact-links {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+  }
+
+  .contact-links p {
+    text-align: center;
   }
 }
 
-/*Media queries for mobile users display screen size 600px*/
+/**Media queries for mobile users display screen size 600px**/
 /*----------------------------------------------------------*/
-
 @media only screen and (max-width: 600px) {
   .header {
     padding: 2% 0 0;
@@ -306,6 +324,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
 
   .nav-bar h1 {
@@ -332,14 +351,25 @@ body {
     padding: 0 1.5rem;
   }
 
-  .hero-banner-title {
-    position: absolute;
-    bottom: 1rem;
+  .hero-banner {
+    padding: 20px;
+  }
 
-    right: 0rem;
-    color: aliceblue;
-    background-color: lightseagreen;
-    padding: 0 1rem;
+  .hero-banner-title {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  /*Profile-Picture Section*/
+  /*----------------------------------------------------------*/
+  .profile-pic {
+    align-self: center;
+    padding: 0;
+  }
+
+  .profile-pic img {
+    padding-bottom: 10px;
   }
 
   .page-section {
@@ -384,9 +414,29 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   .contact-links {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
+  }
+
+  .contact-links p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .contact-links p {
+    text-align: center;
+  }
+}
+
+/*Media queries for mobile users display screen size 765px*/
+/*----------------------------------------------------------*/
+
+@media only screen and (max-width: 765px) {
+  .contact-links p {
+    text-align: center;
   }
 }
