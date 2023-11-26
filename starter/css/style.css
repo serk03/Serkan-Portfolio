@@ -25,24 +25,31 @@ p {
   padding: 0;
 }
 
+/*Colours applied to different section of the website*/
+/*---------------------------------------------------------------------------------------------*/
 :root {
-  --main-bg-color: #388087;
-  --paragraph-text: #eeeeee;
-}
-a {
-  color: var(--paragraph-text);
-}
-p {
-  color: #4a6163;
-}
+  --paragraph-text-colour: #4a6163;
+  /*Header colours*/
+  --header-bg-color: #388087;
+  --navbar-h1-bg-color: lightseagreen;
+  --nav-bar-h1-colour: #f6f6f2;
+  --nav-link-hover-colour: darkslategray;
+  --nav-anchor-text-colour: #eeeeee;
+  /*banner colours*/
+  --banner-h2-bg-colour: lightseagreen;
+  --banner-h2-font-color: #f6f6f2;
+  --profile-pic-border-color: lightseagreen;
+  /*subheading colours*/
+  --grid-subheading-border-colour: #6fb3b8;
+  --grid-subheading-h2-font-colour: lightseagreen;
 
-/*color and hover for contact links*/
-/*---------------------------------*/
-.contact-links p a {
-  color: #4a6163;
-}
-p a:hover {
-  color: lightseagreen;
+  /*work-project-grid-colours*/
+  --work-prog-grid-border-col: #6fb3b8;
+  --work-prog-grid-card-cotainer-bg-color: #6fb3b8;
+
+  /*contact section colors*/
+  --span-contact-link-head-col: #388087;
+  --contact-anchor-hover-colour: lightseagreen;
 }
 
 html {
@@ -56,8 +63,7 @@ body {
 }
 
 /*Navigation Section*/
-/*----------------------------------------------------------*/
-
+/*---------------------------------------------------------------------------------------------*/
 .header {
   margin-left: 0;
   padding: 2% 2% 2% 0;
@@ -65,7 +71,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--main-bg-color);
+  background-color: var(--header-bg-color);
 }
 .nav-bar {
   display: flex;
@@ -84,19 +90,25 @@ body {
   padding: 0 20px;
 }
 
-.nav-links p a:hover {
-  color: darkslategray;
-}
-
 .nav-bar h1 {
   margin-left: 0;
-  background-color: lightseagreen;
-  color: #f6f6f2;
+  background-color: var(--navbar-h1-bg-color);
+  color: var(--nav-bar-h1-colour);
   padding: 0 2.5% 0 5%;
 }
 
+/*colours and hover for navigation links*/
+/*-------------------------------------*/
+.nav-links p a {
+  color: var(--nav-anchor-text-colour);
+}
+
+.nav-links p a:hover {
+  color: var(--nav-link-hover-colour);
+}
+
 /*Banner Section*/
-/*----------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 .hero-banner {
   overflow: hidden;
   background-image: url(../images/02-hero-bg.jpg);
@@ -109,17 +121,17 @@ body {
 }
 
 .hero-banner-title {
-  background-color: lightseagreen;
+  background-color: var(--banner-h2-bg-colour);
   align-self: flex-end;
   padding: 0 20px;
 }
 
 .hero-banner-title h2 {
-  color: #f6f6f2;
+  color: var(--banner-h2-font-color);
 }
 
 /*Profile-Picture Section*/
-/*----------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 .profile-pic {
   padding: 10px;
   align-self: flex-start;
@@ -127,12 +139,13 @@ body {
 
 .profile-pic img {
   width: 200px;
-  border: 5px dotted lightseagreen;
+  border: 5px dotted var(--profile-pic-border-color);
   border-radius: 50%;
 }
 
-/*Main Page Section*/
-/*----------------------------------------------------------*/
+/*Page Wrapper Section*/
+/*Contains 1 column and 3 rows using CSS Grid*/
+/*---------------------------------------------------------------------------------------------*/
 .page-wrapper {
   overflow: hidden;
   max-width: 100%;
@@ -157,6 +170,17 @@ body {
   grid-area: contact;
 }
 
+/*colours and styles for about me section*/
+/*--------------------------------------*/
+#about-me-content {
+  color: var(--paragraph-text-colour);
+  padding: 25px;
+}
+
+/* Page Section*/
+/*Contains 1 column and 3 rows using CSS Grid*/
+/*---------------------------------------------------------------------------------------------*/
+
 .page-section {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -165,23 +189,20 @@ body {
   padding: 20px 0;
 }
 
-.page-section {
-  background-color: #f6f6f2;
-}
-
 .grid-subheading {
   padding: 10% 10% 0 0;
   text-align: right;
-  border-right: 5px solid #6fb3b8;
+  border-right: 5px solid var(--grid-subheading-border-colour);
 }
 
 .grid-subheading h2 {
-  color: lightseagreen;
+  color: var(--grid-subheading-h2-font-colour);
   text-decoration: underline;
 }
 
 /*Project Grid Section*/
-/*----------------------------------------------------------*/
+/*Contains CSS grid divides all the different projects*/
+/*---------------------------------------------------------------------------------------------*/
 .work-content {
   max-width: 100%;
   height: 100%;
@@ -218,37 +239,31 @@ body {
   background-image: url(../images/02-run-buddy.jpg);
 }
 
+/*Styles applied on all sections*/
+/*-----------------------------*/
 .project-grid-styles {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 3px solid #6fb3b8;
+  border: 3px solid var(--work-prog-grid-border-col);
   padding-bottom: 10px;
-  position: relative;
+  display: grid;
+  align-content: end;
 }
 
 .project-grid-styles:hover {
-  filter: brightness(50%);
   color: white;
-}
-
-.project-heading {
-  position: absolute;
-  bottom: 5px;
+  opacity: 0.7;
 }
 
 .project-card-container {
-  background-color: #6fb3b8;
+  background-color: var(--work-prog-grid-card-cotainer-bg-color);
+  display: inline-block;
   padding: 10px;
-  z-index: 3;
-}
-
-#about-me-content {
-  padding: 25px;
 }
 
 /*Contact section*/
-/*----------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 #contact-content-area {
   display: flex;
   flex-direction: row;
@@ -270,91 +285,41 @@ body {
   text-align: center;
 }
 
+/*colours and hover for contact links*/
+/*---------------------------------*/
 span {
-  color: #388087;
+  color: var(--span-contact-link-head-col);
+}
+.contact-links p {
+  color: var(--paragraph-text-colour);
 }
 
-/**MEDIA QUERIES FOR MOBILE USERS DISPLAY SCREEN SIZE 300px**/
-/*----------------------------------------------------------*/
-@media only screen and (max-width: 300px) {
-  .nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.contact-links p a {
+  color: var(--paragraph-text-colour);
+}
+p a:hover {
+  color: var(--contact-anchor-hover-colour);
+}
 
-  .nav-bar h1 {
-    margin-bottom: 1rem;
-    width: 100%;
+/*/MEDIA QUERIES BETWEEN LATOP/ TABLET DISPLAYS AT 670px**/
+/*used to put contact and links in vertical view due spacing issues between laptop and tablet views*/
+/*---------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 670px) {
+  /*Contact Section adjustments at 670px*/
+  /*-----------------------------------*/
+  .contact-links p {
     text-align: center;
   }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    text-align: center;
-  }
-
-  .nav-links p {
-    padding: 0.5rem 0;
-  }
-
-  .hero-banner-title {
-    align-self: center;
-    /* padding: 10px; */
-  }
-
-  /*Profile-Picture Section*/
-  /*----------------------*/
-  .profile-pic {
-    padding: 20px;
-    align-self: center;
-  }
-
-  .page-section {
-    display: grid;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.15fr 3fr;
-    grid-template-areas:
-      "grid-subheading"
-      "content-areas";
-  }
-
-  .grid-subheading {
-    padding: 0;
-    text-align: center;
-    border-right: none;
-    /* border-right: 5px solid #6fb3b8; */
-  }
-
-  .work-content {
-    padding-top: 10%;
-    display: grid;
-    max-width: 100%;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "project-1"
-      "project-2"
-      "project-3"
-      "project-4"
-      "project-5";
-  }
-
-  /*Contact me at 300px*/
-  /*------------------*/
   #contact-content-area {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .contact-links {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   .contact-links p {
@@ -363,12 +328,15 @@ span {
 }
 
 /**MEDIA QUERIES FOR TABLET DISPLAYS AT 600px**/
-/*----------------------------------------------------------*/
-@media only screen and (max-width: 615px) {
+/*---------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  /*Header section adjustments at 600px*/
+  /*----------------------------------*/
   .header {
     padding: 2% 0 0;
   }
-
+  /*navbar section adjustments at 600px*/
+  /*----------------------------------*/
   .nav-bar {
     display: flex;
     flex-direction: column;
@@ -395,6 +363,8 @@ span {
     padding: 0.5rem 0;
   }
 
+  /*Banner section adjustments at 600px*/
+  /*----------------------------------*/
   .hero-banner {
     padding: 20px;
   }
@@ -405,8 +375,8 @@ span {
     text-align: center;
   }
 
-  /*Profile-Picture Section*/
-  /*----------------------*/
+  /*Profile-Picture section adjustments at 600px*/
+  /*-------------------------------------------*/
   .profile-pic {
     align-self: center;
     padding: 0;
@@ -422,6 +392,8 @@ span {
       "content-areas";
   }
 
+  /*Grid Subheading section adjustments at 600px*/
+  /*-------------------------------------------*/
   .grid-subheading {
     padding: 0;
     text-align: center;
@@ -433,6 +405,8 @@ span {
     margin: 0 auto;
   }
 
+  /*Work Content section adjustments at 600px*/
+  /*----------------------------------------*/
   .work-content {
     padding-top: 10%;
     display: grid;
@@ -449,22 +423,93 @@ span {
   }
 }
 
-/*media query for contact links screen size at 765px*/
-/*----------------------------------------------------------*/
-@media only screen and (max-width: 655px) {
-  .contact-links p {
-    text-align: center;
-  }
-  #contact-content-area {
+/**MEDIA QUERIES FOR MOBILE USERS DISPLAY SCREEN SIZE 300px**/
+/*---------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 300px) {
+  /*Navbar section adjustments at 300px*/
+  /*----------------------------------*/
+  .nav-bar {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .contact-links {
+  .nav-bar h1 {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-links p {
+    padding: 0.5rem 0;
+  }
+
+  /*Banner Section adjustments at 300px*/
+  /*----------------------------------*/
+  .hero-banner-title {
+    align-self: center;
+    /* padding: 10px; */
+  }
+
+  /*Profile-Picture Section adjustments at 300px*/
+  /*------------------------------------------*/
+  .profile-pic {
+    padding: 20px;
+    align-self: center;
+  }
+  /*Page Section adjustments at 300px*/
+  /*--------------------------------*/
+  .page-section {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 3fr;
+    grid-template-areas:
+      "grid-subheading"
+      "content-areas";
+  }
+  /*Grid Subheading Section adjustments at 300px*/
+  /*-------------------------------------------*/
+  .grid-subheading {
+    padding: 0;
+    text-align: center;
+    border-right: none;
+  }
+  /*Work Content Section adjustments at 300px*/
+  /*----------------------------------------*/
+  .work-content {
+    padding-top: 10%;
+    display: grid;
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "project-1"
+      "project-2"
+      "project-3"
+      "project-4"
+      "project-5";
+  }
+
+  /*Contact Section adjustments at 300px*/
+  /*-----------------------------------*/
+  #contact-content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-links {
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-links p {
