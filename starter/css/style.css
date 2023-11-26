@@ -25,10 +25,25 @@ p {
   padding: 0;
 }
 
-/* :root {
-} */
+:root {
+  --main-bg-color: #388087;
+  --paragraph-text: #eeeeee;
+}
+a {
+  color: var(--paragraph-text);
+}
+p {
+  color: #4a6163;
+}
 
-/*Font Styles*/
+/*color and hover for contact links*/
+/*---------------------------------*/
+.contact-links p a {
+  color: #4a6163;
+}
+p a:hover {
+  color: lightseagreen;
+}
 
 html {
   height: 150%;
@@ -50,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: darkslategrey;
+  background-color: var(--main-bg-color);
 }
 .nav-bar {
   display: flex;
@@ -66,12 +81,17 @@ body {
   margin: auto 0;
 }
 .nav-links p {
-  padding: 0 0.8rem;
+  padding: 0 20px;
+}
+
+.nav-links p a:hover {
+  color: darkslategray;
 }
 
 .nav-bar h1 {
   margin-left: 0;
   background-color: lightseagreen;
+  color: #f6f6f2;
   padding: 0 2.5% 0 5%;
 }
 
@@ -94,6 +114,10 @@ body {
   padding: 0 20px;
 }
 
+.hero-banner-title h2 {
+  color: #f6f6f2;
+}
+
 /*Profile-Picture Section*/
 /*----------------------------------------------------------*/
 .profile-pic {
@@ -103,6 +127,8 @@ body {
 
 .profile-pic img {
   width: 200px;
+  border: 5px dotted lightseagreen;
+  border-radius: 50%;
 }
 
 /*Main Page Section*/
@@ -123,10 +149,6 @@ body {
   grid-area: about;
 }
 
-#about-content-area {
-  padding: 0.6rem;
-}
-
 #work {
   grid-area: work;
 }
@@ -140,13 +162,22 @@ body {
   grid-template-columns: 20% 80%;
   grid-template-rows: 1fr;
   grid-template-areas: "grid-subheading" "content-areas";
-  /* column-gap: 0.6rem; */
+  padding: 20px 0;
+}
+
+.page-section {
+  background-color: #f6f6f2;
 }
 
 .grid-subheading {
   padding: 10% 10% 0 0;
   text-align: right;
-  border-right: 2px solid lightseagreen;
+  border-right: 5px solid #6fb3b8;
+}
+
+.grid-subheading h2 {
+  color: lightseagreen;
+  text-decoration: underline;
 }
 
 /*Project Grid Section*/
@@ -168,27 +199,22 @@ body {
 
 .project-1 {
   grid-area: project-1;
-  /* min-height: 0px; */
   background-image: url(../images/02-portfolio-4.jpg);
 }
 .project-2 {
   grid-area: project-2;
-  /* min-height: 0px; */
   background-image: url(../images/02-portfolio-1.jpg);
 }
 .project-3 {
   grid-area: project-3;
-  /* min-height: 0px; */
   background-image: url(../images/02-portfolio-2.jpg);
 }
 .project-4 {
   grid-area: project-4;
-  /* min-height: 0px; */
   background-image: url(../images/02-portfolio-3.jpg);
 }
 .project-5 {
   grid-area: project-5;
-  /* min-height: 0px; */
   background-image: url(../images/02-run-buddy.jpg);
 }
 
@@ -196,7 +222,29 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 2px solid lightseagreen;
+  border: 3px solid #6fb3b8;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.project-grid-styles:hover {
+  filter: brightness(50%);
+  color: white;
+}
+
+.project-heading {
+  position: absolute;
+  bottom: 5px;
+}
+
+.project-card-container {
+  background-color: #6fb3b8;
+  padding: 10px;
+  z-index: 3;
+}
+
+#about-me-content {
+  padding: 25px;
 }
 
 /*Contact section*/
@@ -217,10 +265,16 @@ body {
 
 .contact-links p {
   /* display: inline-block; */
-  margin: 0 0.62rem;
+  margin: auto 0.62rem;
   padding: 0.62rem;
+  text-align: center;
 }
-/**Media queries for mobile users display screen size 300px**/
+
+span {
+  color: #388087;
+}
+
+/**MEDIA QUERIES FOR MOBILE USERS DISPLAY SCREEN SIZE 300px**/
 /*----------------------------------------------------------*/
 @media only screen and (max-width: 300px) {
   .nav-bar {
@@ -245,11 +299,6 @@ body {
 
   .nav-links p {
     padding: 0.5rem 0;
-  }
-
-  .nav-bar h1 {
-    background-color: lightseagreen;
-    padding: 0 1.5rem;
   }
 
   .hero-banner-title {
@@ -278,7 +327,7 @@ body {
     padding: 0;
     text-align: center;
     border-right: none;
-    border-bottom: 2px solid lightseagreen;
+    /* border-right: 5px solid #6fb3b8; */
   }
 
   .work-content {
@@ -297,7 +346,7 @@ body {
   }
 
   /*Contact me at 300px*/
-  /*----------------------------------------------------------*/
+  /*------------------*/
   #contact-content-area {
     display: flex;
     flex-direction: column;
@@ -313,9 +362,9 @@ body {
   }
 }
 
-/**Media queries for mobile users display screen size 600px**/
+/**MEDIA QUERIES FOR TABLET DISPLAYS AT 600px**/
 /*----------------------------------------------------------*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 615px) {
   .header {
     padding: 2% 0 0;
   }
@@ -346,11 +395,6 @@ body {
     padding: 0.5rem 0;
   }
 
-  .nav-bar h1 {
-    background-color: lightseagreen;
-    padding: 0 1.5rem;
-  }
-
   .hero-banner {
     padding: 20px;
   }
@@ -362,14 +406,10 @@ body {
   }
 
   /*Profile-Picture Section*/
-  /*----------------------------------------------------------*/
+  /*----------------------*/
   .profile-pic {
     align-self: center;
     padding: 0;
-  }
-
-  .profile-pic img {
-    padding-bottom: 10px;
   }
 
   .page-section {
@@ -386,7 +426,7 @@ body {
     padding: 0;
     text-align: center;
     border-right: none;
-    border-bottom: 2px solid lightseagreen;
+    border-bottom: 5px solid #6fb3b8;
   }
 
   .grid-subheading h2 {
@@ -407,8 +447,14 @@ body {
       "project-4"
       "project-5";
   }
+}
 
-  /*Contact me at 600px*/
+/*media query for contact links screen size at 765px*/
+/*----------------------------------------------------------*/
+@media only screen and (max-width: 655px) {
+  .contact-links p {
+    text-align: center;
+  }
   #contact-content-area {
     display: flex;
     flex-direction: column;
@@ -421,21 +467,6 @@ body {
     justify-content: center;
   }
 
-  .contact-links p {
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 630px) {
-  .contact-links p {
-    text-align: center;
-  }
-}
-
-/*Media queries for mobile users display screen size 765px*/
-/*----------------------------------------------------------*/
-
-@media only screen and (max-width: 765px) {
   .contact-links p {
     text-align: center;
   }
