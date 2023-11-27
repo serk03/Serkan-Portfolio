@@ -54,6 +54,7 @@ p {
 
 html {
   height: 150%;
+  scroll-behavior: smooth;
 }
 
 body {
