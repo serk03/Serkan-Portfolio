@@ -100,10 +100,10 @@ The website also encorporates a responsive design to allow users the ability to 
 <br>
 
 ## Live Site
-- To view the live/ active website please click on the following link: [View Live Serkan Onal Portfolio](https://serk03.github.io/horiseon-refactor/)
+- To view the live/ active website please click on the following link: [View Live Serkan Onal Portfolio](https://serk03.github.io/Serkan-Portfolio/)
 
 ## Serkan Onal Portfolio and Source code on Github
-- To view the repository and its source code please visit Github by clicking on the following link: [View Github Repository](https://github.com/serk03/horiseon-refactor)
+- To view the repository and its source code please visit Github by clicking on the following link: [View Github Repository](https://github.com/serk03/Serkan-Portfolio)
 
 
 ## Usage
