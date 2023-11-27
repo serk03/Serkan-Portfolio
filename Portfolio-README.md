@@ -2,11 +2,13 @@
 
 ## Description
 
-This project was provided by EDX bootcamp, which was designed to prepare me for two scanerios that i will encounter as a developer in the real world. I had to demostrate my ability to adapt to on-the-job/ feature requests and job-seeking coding assessments.
+This portfolio project was created in order to provide people/ employers the ability to find out more information about myself and the work/ projects i have either created or collaborated on. I have attempted to demonstrated my abilities by creating this website which has clear/ concise layout, provides friendly user experience with navigatable links to specific sections of the website.
 
-I was provided with the relevant starter code which i had to modify/ refactor and provide enhancements where needed.
+The website presents my projects and allows users the ability to view the source code/ repositories when they are click on.
 
-Some considerations which i had to encoporate into my website beforehand and during the development. 
+The website also encorporates a responsive design to allow users the ability to view it on different device screens.
+
+ Some considerations which i had to encoporate into my website beforehand and during the development. 
 
 - ***Clean and consistant layout*** - To provide a clean website layout, which enables users to navigate the website and find relevant information.
 - ***Navigation*** - Provide clear links to sections of the website with the use of a navigation bar.
@@ -98,7 +100,7 @@ Some considerations which i had to encoporate into my website beforehand and dur
 <br>
 
 ## Live Site
-- To view the live/ active website please click on the following link: [View Live Horiseon Website](https://serk03.github.io/horiseon-refactor/)
+- To view the live/ active website please click on the following link: [View Live Serkan Onal Portfolio](https://serk03.github.io/horiseon-refactor/)
 
 ## Serkan Onal Portfolio and Source code on Github
 - To view the repository and its source code please visit Github by clicking on the following link: [View Github Repository](https://github.com/serk03/horiseon-refactor)
@@ -108,21 +110,36 @@ Some considerations which i had to encoporate into my website beforehand and dur
 
 Provide instructions and examples for use. Include screenshots as needed.
 
+**Navigation Bar**
 - Use the navigation links at top to immediately navigate to corresponding section below.
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
--Search Engine Optimization - By clicking on this navigation it link will take you to the Search Engine Optimization section below.
+-About Me - By clicking on this navigation it link will take you to the about me section of the portfolio.
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
--Online Reputation Management - By clicking on this navigation it link will take you to the Search Engine Optimization section below.
+-Work - By clicking on this navigation it link will take you to the work/ projects section of the portfolio.
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
--Social Media Marketing - By clicking on this navigation link it will take you to the Search Engine Optimization section below.
+-Contact Me - By clicking on this navigation link it will take you to the Contact Me section of the website.
 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+-Resume - This link works but does not currently link to anything as of yet.
+<br>
+
+**Scroll Function**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 - You can use the scroll functionality on your mouse to either move up or down on the website.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-![alt text](assets/images/horiseon-website.png)
+  **Contact Me Section**
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  - Telphone Link - this links does not have any linkable function, provides user with number.
+  - Email Link - Clicking on this link will automatically open users default email application and input the email address displayed in the send to field.
+  - Github Link - will take user to Serkan Onal Github profile page.
+  - Twitter Link - will take user to Serkan Onal Twitter profile page. 
+<br> 
+
+![alt text](starter\images\Serkan-Onal-Portfolio-page.png)
 
 ## Credits
 
